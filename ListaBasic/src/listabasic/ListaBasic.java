@@ -1,11 +1,14 @@
 package listabasic;
 import java.util.Scanner;
+import java.util.Calendar;
+
 // tranformar em Multicoisas e inserir estruturas de repetição variadas;
 public class ListaBasic {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         //F = C x 1,8 + 32.
         // 1
+      
         System.out.println("Digite a temperatura em Celsius:");
         double celsius = teclado.nextDouble();
         double fahren = celsius * 1.8 +32;
@@ -42,8 +45,65 @@ public class ListaBasic {
         double areaDoTriangulo = base * alturaDoTriangulo;
         System.out.println("A área do triângulo apresentado é de "+areaDoTriangulo);
         
+        //6
         
+        System.out.println("Digite um VALOR:");
+        int valorNum = teclado.nextInt();
+        while(valorNum <0 || valorNum>10){
+            System.out.println("Por favor, digite um número válido:");
+            valorNum=teclado.nextInt();
+        }
+        if(valorNum %2 ==0){
+            System.out.println("O número está entre 0 e 10 e é PAR");
+        }else if(valorNum %2==1){
+            System.out.println("O número está entre 0 e 10 e é ÍMPAR");
+        }
         
+        //7
+        Calendar cal = Calendar.getInstance();
+        double anoAtual = cal.get(Calendar.YEAR);
+        System.out.println("O ano atual é "+ anoAtual );
+        
+        if (anoAtual %4==0){
+            System.out.println("O ano atual é bissexto.");
+        }else{
+            System.out.println("O ano atual NÃO é bissexto");
+        }
+      
+        //8
+        System.out.println("Digite a nota da primeira unidade:");
+        int nota1 = teclado.nextInt();
+        System.out.println("Digite a nota da segunda unidade:");
+        int nota2 = teclado.nextInt();
+        float mediaSemestre = (nota1 + nota2)/ 2;
+        if (mediaSemestre <4){
+            System.out.println("Aluno REPROVADO, pois não atingiu nota suficiente para recuperação.");
+        } else if(mediaSemestre >=4 && mediaSemestre <7){
+            System.out.println("Aluno em RECUPERAÇÃO de nota. Aguarde informações sobre a prova.");
+        }else if (mediaSemestre >7 && mediaSemestre <10){
+            System.out.println("Aluno APROVADO, com média "+mediaSemestre);
+        }else if (mediaSemestre == 10){
+            System.out.println("Aluno APROVADO e PREMIADO com parabéns do sistema. Parabéns!!");
+        } else{
+            System.out.println("Digite uma nota válida.");
+        }
+        
+        //9
+        System.out.println("Digite um número:");
+        int divisivelPor =0;
+        double numPrimo = teclado.nextDouble();
+        for (int i=0; i<=numPrimo; i++){
+            if (numPrimo %i ==0){
+                divisivelPor++;
+            }
+        }
+        if(divisivelPor ==2){
+                System.out.println("O número "+numPrimo+" é primo.");
+            } else {
+                System.out.println("O número "+ numPrimo +" não é primo.");
+            }
+        
+        //10
         
     }
     
