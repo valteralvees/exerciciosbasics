@@ -8,7 +8,7 @@ public class ListaBasic {
         Scanner teclado = new Scanner(System.in);
         //F = C x 1,8 + 32.
         // 1
-     /*
+    
         System.out.println("Digite a temperatura em Celsius:");
         double celsius = teclado.nextDouble();
         double fahren = celsius * 1.8 +32;
@@ -153,7 +153,7 @@ public class ListaBasic {
             numUsado = teclado.nextDouble();
         }
         System.out.println("O programa foi finalizado");
-        */
+       
         //12
         double maior = 0;
         double numPoxa =0;
